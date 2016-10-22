@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/sprites/Mushroom.js</title>
+    <title>Code coverage report for src/gamelife/Cell.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -16,31 +16,31 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../index.html">all files</a> / <a href="index.html">src/sprites/</a> Mushroom.js
+      <a href="../../index.html">all files</a> / <a href="index.html">src/gamelife/</a> Cell.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">98% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>49/50</span>
+        <span class='fraction'>12/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">96.97% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>32/33</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">90% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>9/10</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">85.71% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>6/7</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y'>
-        <span class="strong">4 statements, 13 branches</span>
+        <span class="strong">1 statement, 1 branch</span>
         <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
@@ -61,42 +61,33 @@
 12
 13
 14
-15
-16
-17
-18</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+15</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Phaser from 'phaser'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export default class Cell {
 &nbsp;
-export default class extends Phaser.Sprite {
 &nbsp;
-  constructor ({ game, x, y, asset }) {
-    super(<span class="branch-1 cbranch-no" title="branch not covered" >g</span>ame, x, y, asset)
-&nbsp;
-    this.game = game
-    this.anchor.setTo(0.5)
+  constructor (neighbours, state) {
+    this.neighbours = neighbours;
+    this.state = state;
   }
 &nbsp;
-  update () <span class="fstat-no" title="function not covered" >{</span>
-    this.<span class="cstat-no" title="statement not covered" >angle += 1</span>
-  }
 &nbsp;
 }
+&nbsp;
+Cell.ALIVE = "ALIVE";
+Cell.DEATH = "DEATH";
 &nbsp;
 &nbsp;</pre></td></tr>
 </table></pre>

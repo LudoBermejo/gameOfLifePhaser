@@ -1,4 +1,4 @@
-export default class {
+/*export default class {
 
 
   constructor ({ width, height }) {
@@ -29,3 +29,4 @@ export default class {
 
 
 }
+*/
