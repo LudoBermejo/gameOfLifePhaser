@@ -1,7 +1,36 @@
 export default class {
 
+  constructor  ({width, height}) {
 
-  constructor ({ width, height }) {
+    this.arrayV = new Array(width)
+    for(let i=0;i<=this.arrayV.length-1;i++) {
+      this.arrayV[i] =  new Array(height).fill(0);
+    }
+
+
+
+  }
+
+
+getCell(x,y){
+  if((x < 0 || x > this.arrayV.length) || (y < 0 || y > this.arrayV[0].length))
+    return undefined;
+
+  return this.arrayV[x][y];
+}
+
+  setCell(x,y,alive){
+    if((x < 0 || x > this.arrayV.length) || (y < 0 || y > this.arrayV[0].length))
+      return false;
+    this.arrayV[x][y] = alive;
+    return true;
+  }
+  getCellsAlive(){
+    i = 0;
+    for ();
+  }
+
+ /* constructor ({ width, height }) {
     this.width = width
     this.height = height
     let array = Array(this.width-1);
@@ -9,11 +38,15 @@ export default class {
     this.board = array.fill(array2)
   }
 
+  _randomBetweenNumbers(min, max) {
+    return Math.floor(Math.random() * max) + min
+  }
+
   randomFillIslands(number=30) {
     while(number--) {
       this.createIsland({
-        x: Math.floor(Math.random() * (this.width)),
-        y: Math.floor(Math.random() * (this.height))
+        x: this._randomBetweenNumbers(1, this.width-1),
+        y: this._randomBetweenNumbers(1, this.height-1)
       })
     }
     return number
@@ -21,11 +54,26 @@ export default class {
 
   createIsland({x, y}) {
     for(let cx=x-1;cx<=x+1;cx++) {
-      for(let cy=cy-1;cy<=cy+1;cy++) {
-        this.board[x][y] =  Math.round(Math.random());
+      for(let cy=y-1;cy<=y+1;cy++) {
+        console.log("Enchufo en ", cx, cy)
+        this.board[cx][cy] = 1
       }
     }
   }
 
+  getLifeCells() {
+    const arrayResults = [];
+    for(let cx=0;cx<=this.board[cx].length-1;cx++) {
+      for(let cy=0;cy<=this.board[cx].length-1;cy++) {
+        console.log(cx, cy, this.board[cx][cy])
+        if(this.board[cx][cy] === 1) {
+          console.log("FOUND");
+          arrayResults.push( { cx, cy })
+        }
+      }
+    }
+    return arrayResults;
+  }
 
+*/
 }
